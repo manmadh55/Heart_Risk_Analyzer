@@ -239,6 +239,19 @@ Built using Streamlit:
 * Risk score display
 
 ---
+# 📷 Application Screenshots
+
+## Home Page
+
+![Home Page](assets/home.png.png)
+
+## Prediction Results
+
+![Prediction Results](assets/prediction.png.png)
+
+## SHAP Explainability
+
+![SHAP Explanation](assets/shap_explaination.png.png)
 
 # 🚀 How to Run
 
