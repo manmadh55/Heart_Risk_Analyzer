@@ -136,7 +136,8 @@ def load_shap_bg():
     df['ca'].fillna(df['ca'].mode()[0], inplace=True)
     df['thal'].fillna(df['thal'].mode()[0], inplace=True)
     for col in ['sex', 'cp', 'fbs', 'restecg', 'exang', 'slope', 'ca', 'thal']:
-        df[col] = df[col].astype(int)
+        df[col] = pd.to_numeric(df[col], errors="coerce")
+    df[col] = df[col].fillna(0).astype(int)
     df['target'] = (df['num'] > 0).astype(int)
     df.drop('num', axis=1, inplace=True)
     categorical_cols = ['cp', 'restecg', 'slope', 'thal']
